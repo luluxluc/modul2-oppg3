@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtPortfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>My Art Portfolio</h1>
+
+    <form id="artForm">
+        <input type="text" id="title" placeholder="Title" required>
+        <input type="text" id="type" placeholder="Type (ex: paint, traditional, digital)" required>
+        <input type="file" id="image" accept="image/*">
+        <button type="submit">Add Artpiece</button>
+    </form>
+
+    <div>
+        <select id="filterSelect">
+            <option value="all">Show All</option>
+            <option value="favorites">Show Favorites</option>
+            <option value="painting">Show Paintings</option>
+            <option value="digital">Show Digital</option>
+            <option value="illustration">Show Illustrations</option>
+        </select>
+
+        <select id="sortSelect">
+            <option value="title">Alphabetical (A-Å)</option>
+            <option value="date">Date</option>
+        </select>
+    </div>
+
+    <h2>My Artworks</h2>
+    <div id="portfolioGrid" class="grid"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
